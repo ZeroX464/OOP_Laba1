@@ -96,7 +96,7 @@ namespace OOP_Laba1
             else
             {
                 this.BackColor = Color.White;
-                TextBoxStart.BackColor = Color.White;
+                TextBoxStart.BackColor = Color.Coral;
             }
         }
 
@@ -144,7 +144,7 @@ namespace OOP_Laba1
         private void Laba1_SizeChanged(object sender, EventArgs e)
         {
             progressBar1.Width = Laba1.ActiveForm.Width;
-            if (WindowState != FormWindowState.Minimized)
+            if (WindowState != FormWindowState.Minimized && (ActiveForm.Width > bufferBitmap.Width || ActiveForm.Height > bufferBitmap.Height))
             {
                 bufferBitmap2 = new Bitmap(ActiveForm.Width, ActiveForm.Height);
                 using (Graphics g = Graphics.FromImage(bufferBitmap2))
